@@ -72,8 +72,8 @@ h2 {
 }
 
 h1 {
-  max-width: 9ch;
-  font-size: clamp(4rem, 13vw, 8.5rem);
+  max-width: 12ch;
+  font-size: clamp(3.25rem, 10vw, 6.7rem);
 }
 
 h2 {
@@ -123,7 +123,6 @@ p {
 }
 
 .letter,
-.plain-list,
 .outside,
 .final {
   margin-bottom: clamp(1.5rem, 4vw, 3rem);
@@ -141,20 +140,6 @@ p {
 
 .letter h2 {
   margin-bottom: 0.4rem;
-}
-
-.plain-list .list {
-  display: grid;
-  gap: 0.8rem;
-  margin-top: 1.4rem;
-}
-
-.plain-list .list p {
-  padding: 1rem;
-  border-left: 4px solid var(--accent);
-  border-radius: var(--radius);
-  background: rgba(255, 253, 249, 0.76);
-  box-shadow: 0 10px 30px rgba(74, 45, 36, 0.08);
 }
 
 .outside {
