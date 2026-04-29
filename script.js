@@ -138,19 +138,19 @@ window.addEventListener("pointerleave", () => {
 document.querySelector("#burstButton").addEventListener("click", (event) => {
   const rect = event.currentTarget.getBoundingClientRect();
   makeSpark(rect.left + rect.width / 2, rect.top + rect.height / 2, 28);
-  showToast("A tiny sparkle. A real apology.");
+  showToast("This is small, but I mean it.");
 });
 
 document.querySelector("#heartButton").addEventListener("click", (event) => {
   const rect = event.currentTarget.getBoundingClientRect();
   makeSpark(rect.left + rect.width / 2, rect.top + rect.height / 2, 34);
-  showToast("I love you, and I'm listening.");
+  showToast("I love you. I'm listening.");
 });
 
 document.querySelector("#finalButton").addEventListener("click", (event) => {
   const rect = event.currentTarget.getBoundingClientRect();
   makeSpark(rect.left + rect.width / 2, rect.top + rect.height / 2, 40);
-  showToast("I'm here when you're ready.");
+  showToast("No rush. I'm here.");
 });
 
 document.querySelectorAll(".promise-tile").forEach((tile) => {
@@ -170,7 +170,7 @@ document.querySelectorAll(".constellation button").forEach((button) => {
 
     const lit = document.querySelectorAll(".constellation button.lit").length;
     if (lit === 5) {
-      showToast("All five lights are on. I mean every one.");
+      showToast("All five are lit. I mean every one.");
     }
   });
 });

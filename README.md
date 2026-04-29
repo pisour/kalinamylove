@@ -1,4 +1,4 @@
-# Kalina My Love
+# My Love
 
 A small static apology page built for GitHub Pages.
 
