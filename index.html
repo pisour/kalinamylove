@@ -1,0 +1,221 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="A sincere animated apology page made with love."
+    />
+    <title>For Kalina, With Love</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&amp;family=Playfair+Display:wght@700;800&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <canvas id="sky" aria-hidden="true"></canvas>
+
+    <div class="aurora" aria-hidden="true">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+
+    <main>
+      <section class="hero" aria-labelledby="page-title">
+        <div class="hero-copy">
+          <p class="eyebrow">A small universe for one person</p>
+          <h1 id="page-title">Kalina, I&rsquo;m sorry.</h1>
+          <p class="hero-text">
+            I made this because I don&rsquo;t want the silence to carry what I should
+            say clearly. Tap around. Every little light is still trying to say
+            the same thing: I love you, and I want to do better.
+          </p>
+          <div class="hero-actions" aria-label="Page actions">
+            <a class="primary-action" href="#letter">Open the letter</a>
+            <button class="icon-action" type="button" id="burstButton">
+              &#10022;
+              <span>Send a little sparkle</span>
+            </button>
+          </div>
+        </div>
+
+        <div class="heart-orbit" aria-label="Animated heart constellation">
+          <button
+            class="heart-core"
+            type="button"
+            id="heartButton"
+            aria-label="Send a loving sparkle"
+          >
+            <span>tap</span>
+          </button>
+          <i style="--i: 0" aria-hidden="true"></i>
+          <i style="--i: 1" aria-hidden="true"></i>
+          <i style="--i: 2" aria-hidden="true"></i>
+          <i style="--i: 3" aria-hidden="true"></i>
+          <i style="--i: 4" aria-hidden="true"></i>
+          <i style="--i: 5" aria-hidden="true"></i>
+          <i style="--i: 6" aria-hidden="true"></i>
+          <i style="--i: 7" aria-hidden="true"></i>
+        </div>
+      </section>
+
+      <section class="letter-section" id="letter" aria-labelledby="letter-title">
+        <div class="section-heading">
+          <p class="eyebrow">The real part</p>
+          <h2 id="letter-title">Hey love, I&rsquo;ve been thinking about what happened.</h2>
+        </div>
+
+        <article class="letter" id="letterCard">
+          <p>
+            I&rsquo;m sorry for making you feel like you had to repeat yourself again.
+            I know you already know that I process things by thinking out loud,
+            but I also understand that when we&rsquo;ve already talked about something
+            before, it can still feel like I&rsquo;m not checked in or like I&rsquo;m asking
+            you to explain yourself all over again.
+          </p>
+          <p>
+            That wasn&rsquo;t my intention, but I understand why it frustrated you.
+          </p>
+          <p>
+            I also want to acknowledge that I haven&rsquo;t fully followed through on
+            my promise about therapy. I don&rsquo;t want that to come across like I&rsquo;m
+            not taking things seriously. I have genuinely been trying to improve
+            through meditation, better lifestyle habits, focusing more on work,
+            and putting myself in situations where I have to be more present,
+            remember things, and think things through properly.
+          </p>
+          <p>
+            But I also understand that trying in my own way is not the same as
+            showing you consistency in the way I promised. I don&rsquo;t want you to
+            feel like I only improve when it suits me, or that I make promises
+            and then quietly replace them with something else.
+          </p>
+          <p>
+            I love you, and I don&rsquo;t want us to stay in silence or keep repeating
+            this same cycle. I&rsquo;m not saying I was trying to hurt you, and I&rsquo;m not
+            saying your feelings are wrong either. I&rsquo;m saying I see how it
+            landed, I&rsquo;m sorry for my part in it, and I want us to move forward
+            better.
+          </p>
+          <p>
+            Next time, I&rsquo;ll be clearer when I&rsquo;m processing out loud so it
+            doesn&rsquo;t feel like I&rsquo;m making you repeat yourself. And with therapy,
+            I&rsquo;ll be honest with you about where I&rsquo;m at instead of just letting
+            the promise sit there.
+          </p>
+        </article>
+      </section>
+
+      <section class="interactive-section" aria-labelledby="pieces-title">
+        <div class="section-heading compact">
+          <p class="eyebrow">Tap the pieces</p>
+          <h2 id="pieces-title">What I want you to feel from me</h2>
+        </div>
+
+        <div class="promise-grid">
+          <button
+            class="promise-tile active"
+            type="button"
+            aria-pressed="true"
+            data-tone="listening"
+            data-title="I&rsquo;m listening, not restarting the whole conversation."
+            data-copy="When I think out loud, I&rsquo;ll name it as processing instead of making it feel like you need to explain yourself again."
+          >
+            <span class="tile-icon" aria-hidden="true">&#9676;</span>
+            <span>Listening</span>
+          </button>
+          <button
+            class="promise-tile"
+            type="button"
+            aria-pressed="false"
+            data-tone="ownership"
+            data-title="I understand why it landed badly."
+            data-copy="My intention does not erase the impact. I can love you and still own the part where I made things heavier for you."
+          >
+            <span class="tile-icon" aria-hidden="true">&#9671;</span>
+            <span>Ownership</span>
+          </button>
+          <button
+            class="promise-tile"
+            type="button"
+            aria-pressed="false"
+            data-tone="therapy"
+            data-title="I won&rsquo;t quietly replace the promise."
+            data-copy="Meditation and better habits matter, but they are not the same thing as being honest and consistent about therapy."
+          >
+            <span class="tile-icon" aria-hidden="true">&#10038;</span>
+            <span>Therapy</span>
+          </button>
+          <button
+            class="promise-tile"
+            type="button"
+            aria-pressed="false"
+            data-tone="repair"
+            data-title="I want the next version of us to feel calmer."
+            data-copy="Not perfect. Just clearer, steadier, and less exhausting for you when something is already sensitive."
+          >
+            <span class="tile-icon" aria-hidden="true">&#9825;</span>
+            <span>Repair</span>
+          </button>
+        </div>
+
+        <div class="message-display" id="messageDisplay" aria-live="polite">
+          <p class="display-kicker">Listening</p>
+          <h3>I&rsquo;m listening, not restarting the whole conversation.</h3>
+          <p>
+            When I think out loud, I&rsquo;ll name it as processing instead of making
+            it feel like you need to explain yourself again.
+          </p>
+        </div>
+      </section>
+
+      <section class="constellation-section" aria-labelledby="constellation-title">
+        <div class="section-heading compact">
+          <p class="eyebrow">A tiny repair map</p>
+          <h2 id="constellation-title">Click each light to turn it into a promise.</h2>
+        </div>
+
+        <div class="constellation" id="constellation">
+          <button type="button" style="--x: 13%; --y: 26%" aria-pressed="false">
+            Be clearer when I&rsquo;m processing.
+          </button>
+          <button type="button" style="--x: 34%; --y: 64%" aria-pressed="false">
+            Ask for space without making you carry it.
+          </button>
+          <button type="button" style="--x: 55%; --y: 20%" aria-pressed="false">
+            Be honest about therapy instead of vague.
+          </button>
+          <button type="button" style="--x: 73%; --y: 57%" aria-pressed="false">
+            Follow through where I said I would.
+          </button>
+          <button type="button" style="--x: 88%; --y: 31%" aria-pressed="false">
+            Keep choosing us with care.
+          </button>
+        </div>
+      </section>
+
+      <section class="final-section" aria-labelledby="final-title">
+        <p class="eyebrow">No pressure, just love</p>
+        <h2 id="final-title">I don&rsquo;t need the perfect words back.</h2>
+        <p>
+          I just wanted mine to be clear. I love you. I&rsquo;m sorry. I&rsquo;m here when
+          you&rsquo;re ready.
+        </p>
+        <button class="primary-action final-button" type="button" id="finalButton">
+          One more sparkle
+        </button>
+      </section>
+    </main>
+
+    <div class="toast" id="toast" role="status" aria-live="polite">
+      I love you. I&rsquo;m here.
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
